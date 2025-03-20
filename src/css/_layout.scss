@@ -1,0 +1,64 @@
+
+
+$primary-color: hsl(48, 90%, 42%);
+$dark-mode-color: darken($primary-color, 50%);
+
+$menu-background: rgb(233, 190, 0);
+$dark-mode-menu: darken($menu-background, 10%);
+$menu-text-color: white;
+
+$main-background: rgb(0, 0, 0);
+
+header {
+    background-color: $menu-background;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 65px;
+    left: 35%;
+
+    ul {
+        align-items: center;
+    }   
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $menu-text-color;
+        margin-right: 100px;
+    }
+}
+
+.theme {
+    background-color: $main-background;
+}
+
+.movie {
+    width: 200px;
+    text-align: center;
+}
+
+#home-page-movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: $dark-mode-menu;
+    }
+    .menu a {
+        color: black;
+    }
+}
