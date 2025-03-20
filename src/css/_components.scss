@@ -1,1 +1,27 @@
 /* Återanvändbara komponenter som knappar, länkar, bakgrundsbilder osv. */
+
+#search-section {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+button {
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    font-size: 30px;
+    margin-top: 30px;
+}
+}
+
+#search-field {
+    height: 50px;
+    font-size: 30px;
+    margin-top: 28px;
+}
+
+#search-button {
+    border-radius: 5px solid;
+    border-width: 5px;
+    border-color: black;
+    font-weight: bolder;
+}
