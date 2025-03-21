@@ -1,5 +1,3 @@
-
-
 $primary-color: hsl(48, 90%, 42%);
 $dark-mode-color: darken($primary-color, 50%);
 
@@ -9,6 +7,9 @@ $menu-text-color: white;
 
 $main-background: rgb(0, 0, 0);
 
+body {
+    background-color: $main-background;
+}
 header {
     background-color: $menu-background;
 }
@@ -45,12 +46,44 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .movie img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+#movieDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+    h3 {
+        margin-bottom: 15px;
+    }
+    h4 {
+        font-size: 22px;
+    }
+    h5 {
+        margin-top: 40px;
+        color: rgb(233, 190, 0);
+        font-size: 22px;
+    }
+    img {
+        width: 250px;
+    }
+    p {
+        text-align: center;
+        width: 500px;
+        margin-top: 30px;
+    }
 }
 
 
