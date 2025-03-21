@@ -1,12 +1,10 @@
 "use strict";
 
-"use strict";
-
 const apiKey = "cde6c1c5";
 const searchInput = document.getElementById("search-field");
 const searchButton = document.getElementById("search-button");
 const moviesContainer = document.getElementById("home-page-movies");
-const movieDetails = document.getElementById("movieDetailsDiv")
+const movieDetails = document.getElementById("movieDetailsDiv");
 
 // Eventhanterare som lyssnar på klick på sökknappen.
 searchButton.addEventListener("click", () => {
@@ -104,4 +102,5 @@ function displayMovieDetails(movie) {
         <p>${movie.Plot}</p>
         <p><i class="fa-solid fa-trophy" style="color: rgb(233, 190, 0);"></i> ${movie.Awards}</p>
     `
-}
+};
+

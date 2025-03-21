@@ -86,6 +86,14 @@ header {
     }
 }
 
+#home-page-section1 {
+    text-align: center;
+    margin-top: 50px;
+
+    p {
+        margin-top: 10px;
+    }
+}
 
 @media (prefers-color-scheme: dark) {
     header {

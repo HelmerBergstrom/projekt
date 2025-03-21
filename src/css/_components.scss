@@ -10,6 +10,7 @@ button {
     background-color: white;
     font-size: 30px;
     margin-top: 30px;
+    animation: opacityButton 3s forwards;
 }
 }
 
@@ -19,9 +20,21 @@ button {
     margin-top: 28px;
 }
 
-#search-button {
-    border-radius: 5px solid;
-    border-width: 5px;
-    border-color: black;
+#search-button-home1 {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
     font-weight: bolder;
+}
+#search-button-home2 {
+    @extend #search-button-home1 ;
+    animation: translateButton 3s forwards;
 }
