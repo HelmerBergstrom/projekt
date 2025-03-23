@@ -42,7 +42,7 @@ header {
     text-align: center;
 }
 
-#home-page-movies {
+#moviesContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -95,11 +95,17 @@ header {
     }
 }
 
+#movie-page-info {
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
     header {
         background-color: $dark-mode-menu;
     }
     .menu a {
-        color: black;
+        color: $main-background;
     }
 }

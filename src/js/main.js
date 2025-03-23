@@ -3,14 +3,16 @@
 const apiKey = "cde6c1c5";
 const searchInput = document.getElementById("search-field");
 const searchButton = document.getElementById("search-button");
-const moviesContainer = document.getElementById("home-page-movies");
+const moviesContainer = document.getElementById("moviesContainer");
 const movieDetails = document.getElementById("movieDetailsDiv");
+const moviePageText = document.getElementById("movie-page-info");
 
 // Eventhanterare som lyssnar på klick på sökknappen.
 searchButton.addEventListener("click", () => {
     const searchTitle = searchInput.value;
     if (searchTitle) {
         searchMovies(searchTitle);
+        moviePageText.style.display = "block";
     }
 });
 
@@ -20,6 +22,7 @@ searchInput.addEventListener("keypress", (event) => {
         const searchTitle = searchInput.value;
         if (searchTitle) {
             searchMovies(searchTitle);
+            moviePageText.style.display = "block";
         }
     }
 });
