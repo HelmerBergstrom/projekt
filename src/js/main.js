@@ -78,6 +78,7 @@ async function getMovieDetails(imdbID) {
 
         if (movie.Response === "True") {
             displayMovieDetails(movie);
+            directorInfo(movie);
 
             document.getElementById("movieDetailsDiv").scrollIntoView({
                 behavior: "smooth",
@@ -93,17 +94,44 @@ async function getMovieDetails(imdbID) {
 
 function displayMovieDetails(movie) {
     movieDetails.innerHTML = `
-        <h2>${movie.Title}</h2>
-        <h3>BETYG FRÅN IMDB: ${movie.imdbRating}</h3>
+        <h1>${movie.Title}</h1>
+        <p>BETYG FRÅN IMDB: ${movie.imdbRating}</p>
         <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}">
-        <h4>LÄNGD: ${movie.Runtime}</h4>
-        <h4>GENRE: ${movie.Genre}</h4>
-        <h4>REGISSÖR: ${movie.Director}</h4>
-        <h4>SLÄPPTES: ${movie.Year}</h4>
+        <p><strong>LÄNGD:</strong> ${movie.Runtime}</p>
+        <p><strong>GENRE:</strong> ${movie.Genre}</p>
+        <p><strong>REGISSÖR:</strong> ${movie.Director}</p>
+        <p><strong>SLÄPPTES:</strong> ${movie.Year}</p>
 
-        <h5> THE PLOT: </h5>
-        <p>${movie.Plot}</p>
-        <p><i class="fa-solid fa-trophy" style="color: rgb(233, 190, 0);"></i> ${movie.Awards}</p>
+        <p id="awardsText"><i class="fa-solid fa-trophy" style="color: rgb(233, 190, 0);"></i> ${movie.Awards}</p>
+
+
+        <h2 style="color: rgb(233, 190, 0);"> THE PLOT: </h2>
+        <p id="plotText">${movie.Plot}</p>
     `
 };
 
+// Wikipedia API som ska koppla film/serie till regissör och skriva ut information om regissören.
+
+async function directorInfo(searchInput) {
+    const formattedSearch = searchInput.Director.replace(/ /g, "_");
+    const wikiUrl = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro&titles=${formattedSearch}&format=json&origin=*`;
+
+    try {
+        const response = await fetch(wikiUrl);
+        const data = await response.json();
+        const page = Object.values(data.query.pages)[0];
+    
+        if(page.extract) {
+            document.getElementById("director-info").innerHTML = `
+            <h3 style="color: rgb(233, 190, 0);">Snabb fakta om regissören ${page.title}</h3>
+            <p>${page.extract} </p>
+        `
+        } else {
+            document.getElementById("director-info").innerHTML = `
+            <p> Ingen information om regissören hittades! </p>
+            `
+        }
+    } catch(error) {
+        console.error("FEL: ", error);
+    }
+};
