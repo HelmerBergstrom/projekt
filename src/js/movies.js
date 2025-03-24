@@ -105,7 +105,7 @@ function displayMovieDetails(movie) {
         <p id="awardsText"><i class="fa-solid fa-trophy" style="color: rgb(233, 190, 0);"></i> ${movie.Awards}</p>
 
 
-        <h2 style="color: rgb(233, 190, 0);"> THE PLOT: </h2>
+        <h2 style="color: rgb(233, 190, 0);"> THE PLOT </h2>
         <p id="plotText">${movie.Plot}</p>
     `
 };
