@@ -92,8 +92,22 @@ header {
         margin-top: 10px;
     }
 }
+
 #home-page-posters {
-    width: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.posterPic {
+    text-align: center;
+
+    img {
+        width: 100px;
+        border-radius: 10px;
+    }
 }
 
 #movie-page-info {
