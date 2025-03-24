@@ -90,7 +90,7 @@ async function getMovieDetails(imdbID) {
     } catch (error) {
         console.error("Fel!", error);
     }
-    }
+};
 
 function displayMovieDetails(movie) {
     movieDetails.innerHTML = `
@@ -113,8 +113,16 @@ function displayMovieDetails(movie) {
 // Wikipedia API som ska koppla film/serie till regissör och skriva ut information om regissören.
 
 async function directorInfo(searchInput) {
+
+    if(searchInput.Director === "N/A") {
+        document.getElementById("director-info").innerHTML = `
+        <p> Ingen info om regissören hittades! </p>
+        `;
+        return;
+    }
+
     const formattedSearch = searchInput.Director.replace(/ /g, "_");
-    const wikiUrl = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro&titles=${formattedSearch}&format=json&origin=*`;
+    const wikiUrl = `https://sv.wikipedia.org/w/api.php?action=query&prop=extracts&exintro&titles=${formattedSearch}&format=json&origin=*`;
 
     try {
         const response = await fetch(wikiUrl);
