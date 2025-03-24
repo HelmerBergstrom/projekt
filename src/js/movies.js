@@ -143,3 +143,24 @@ async function directorInfo(searchInput) {
         console.error("FEL: ", error);
     }
 };
+
+window.addEventListener("DOMContentLoaded", () => {
+    if(window.location.pathname === "/" || window.location.pathname.includes("index.html")) {
+        displayHomePage();
+    }
+});
+
+async function displayHomePage() {
+    const posterUrl1 = `http://www.omdbapi.com/?s=tt1877830&apikey=${apiKey}`;
+
+    try {
+        const response = await fetch(posterUrl1)
+        const poster = await response.json();
+
+        document.getElementById("home-page-posters").innerHTML = `
+        <img src="${poster.Poster !== "N/A" ? poster.Poster : "placeholder.jpg"}" alt="${poster.Title}">
+    `
+    } catch(error) {
+        console.error("Fel: ", error);
+    }
+};
