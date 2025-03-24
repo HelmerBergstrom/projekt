@@ -138,6 +138,19 @@ header {
     margin-bottom: 20px;
 }
 
+#arrowAni1 {
+    animation: arrow1 1.5s infinite;
+}
+#arrowAni2 {
+    animation: arrow2 1s infinite;
+}
+#arrowAni3 {
+    animation: arrow3 1s infinite;
+}
+#arrowAni4 {
+    animation: arrow4 1.5s infinite;
+}
+
 #director-info {
     @extend #movieDetailsDiv ;
 
