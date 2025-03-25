@@ -52,6 +52,14 @@ header {
         color: $menu-background;
     }
 }
+#love-text {
+    margin-bottom: 50px;
+}
+.fa-film {
+    font-size: 100px;
+    margin-bottom: 50px;
+    animation: filmFont 1s forwards;
+}
 
 #home-buy h2 {
     margin-top: 50px;

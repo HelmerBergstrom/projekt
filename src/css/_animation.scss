@@ -67,3 +67,21 @@
         opacity: 1;
     }
 }
+
+@keyframes filmFont {
+    0% {
+        transform: translateY(-100px);
+    }
+    25% {
+        transform: translateY(-55px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
