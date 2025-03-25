@@ -39,10 +39,10 @@ function displayHomePage(poster) {
         const posterElement = document.createElement("div");
         posterElement.classList.add("posterPic");
         posterElement.innerHTML = `
-        <img src="${posterPicture}" alt="${post.Title}">
+        <a href="order.html">
+        <img src="${posterPicture}" alt="${post.Title}"></a>
         <br>
         <br>
-        <a href="#" id="buyPoster"> KÖP POSTER </a>
         <br>
         <br>
         <p> 999kr/st </p>

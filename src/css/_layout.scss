@@ -17,7 +17,7 @@ header {
     justify-content: center;
     position: absolute;
     top: 65px;
-    left: 35%;
+    left: 30%;
 
     ul {
         align-items: center;
@@ -171,6 +171,19 @@ header {
 
 #awardsText {
     margin-top: 20px;
+}
+
+// Order-sidan
+#orderPosters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.order-poster-class {
+    @extend .movie ;
+    margin-top: 50px;
 }
 
 // Media för ljus/mörkt tema på använderens dator.
