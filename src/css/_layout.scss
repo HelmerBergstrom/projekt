@@ -1,6 +1,3 @@
-$primary-color: hsl(48, 90%, 42%);
-$dark-mode-color: darken($primary-color, 50%);
-
 $menu-background: rgb(233, 190, 0);
 $dark-mode-menu: darken($menu-background, 10%);
 $menu-text-color: white;
@@ -13,6 +10,8 @@ body {
 header {
     background-color: $menu-background;
 }
+
+
 .menu {
     display: flex;
     justify-content: center;
@@ -37,9 +36,77 @@ header {
     background-color: $main-background;
 }
 
-.movie {
-    width: 200px;
+
+// Index-sidan
+
+#home-page-section1 {
     text-align: center;
+    margin-top: 50px;
+    animation: posterAnimation 1s ease-out forwards;
+
+    h1 {
+        color: $menu-background;
+    }
+    p {
+        margin-top: 10px;
+        color: $menu-background;
+    }
+}
+
+#home-buy h2 {
+    margin-top: 50px;
+}
+
+#arrowAni1 {
+    animation: arrow1 1.5s infinite;
+}
+#arrowAni2 {
+    animation: arrow2 1s infinite;
+}
+#arrowAni3 {
+    animation: arrow3 1s infinite;
+}
+#arrowAni4 {
+    animation: arrow4 1.5s infinite;
+}
+
+#home-page-posters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.posterPic {
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    padding: 50px;
+
+    img {
+        width: 250px;
+        border-radius: 10px;
+        animation: posterAnimation 3s ease-out forwards;
+        opacity: 0;
+    }
+}
+
+// Skapad i home.js
+
+#buyPoster {
+    color: black;
+    background-color: rgb(233, 190, 0);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+// Movies-sidan.
+
+#movie-page-info {
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
 }
 
 #moviesContainer {
@@ -47,14 +114,6 @@ header {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-}
-
-.movie img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    background-color: rgb(48, 48, 48);
-    padding: 5px;
 }
 
 #movieDetailsDiv {
@@ -79,77 +138,6 @@ header {
         width: 500px;
     }
 }
-#plotText {
-    margin-bottom: 20px;
-}
-#awardsText {
-    margin-top: 20px;
-}
-
-#home-page-section1 {
-    text-align: center;
-    margin-top: 50px;
-    animation: posterAnimation 1s ease-out forwards;
-
-    h1 {
-        color: rgb(233, 190, 0);
-    }
-    p {
-        margin-top: 10px;
-        color: rgb(233, 190, 0);
-    }
-}
-
-#home-page-posters {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.posterPic {
-    text-align: center;
-    background-color: rgb(48, 48, 48);
-    padding: 50px;
-
-    img {
-        width: 250px;
-        border-radius: 10px;
-        animation: posterAnimation 3s ease-out forwards;
-        opacity: 0;
-    }
-}
-#starWarsText h2 {
-    margin-top: 50px;
-}
-
-#buyPoster {
-    color: black;
-    background-color: rgb(233, 190, 0);
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-#movie-page-info {
-    text-align: center;
-    display: none;
-    margin-bottom: 20px;
-}
-
-#arrowAni1 {
-    animation: arrow1 1.5s infinite;
-}
-#arrowAni2 {
-    animation: arrow2 1s infinite;
-}
-#arrowAni3 {
-    animation: arrow3 1s infinite;
-}
-#arrowAni4 {
-    animation: arrow4 1.5s infinite;
-}
 
 #director-info {
     @extend #movieDetailsDiv ;
@@ -161,6 +149,31 @@ header {
         text-align: center;
     }
 }
+
+// Skapade i movies.js
+
+.movie {
+    width: 200px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        background-color: rgb(48, 48, 48);
+        padding: 5px;
+    }
+}
+
+#plotText {
+    margin-bottom: 20px;
+}
+
+#awardsText {
+    margin-top: 20px;
+}
+
+// Media för ljus/mörkt tema på använderens dator.
 
 @media (prefers-color-scheme: dark) {
     header {

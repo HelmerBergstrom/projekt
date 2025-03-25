@@ -42,7 +42,7 @@ function displayHomePage(poster) {
         <img src="${posterPicture}" alt="${post.Title}">
         <br>
         <br>
-        <a href="#" id="buyPoster"> KÖP POSTER </a> 
+        <a href="#" id="buyPoster"> KÖP POSTER </a>
         <br>
         <br>
         <p> 999kr/st </p>
