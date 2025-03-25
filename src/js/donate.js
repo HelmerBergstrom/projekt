@@ -3,6 +3,8 @@
 const apiKey = "cde6c1c5";
 
 const divEl = document.getElementById("orderPosters");
+const orderSection = document.getElementById("order-section");
+const orderForm = document.getElementById("order-form");
 
 window.addEventListener("DOMContentLoaded", () => {
     if(window.location.pathname.includes("/order.html")) {
@@ -43,9 +45,32 @@ function displayPosters(posters) {
         <br>
         <p> 999kr/st </p>
         <br>
-        
         `
-
+        
+        posterEl.addEventListener("click", () => {
+            displayOrderForm(post);
+            orderForm.style.display = "block";
+            orderSection.style.display = "flex"
+        });
+    
         divEl.appendChild(posterEl)
     });
-}
+};
+
+function displayOrderForm(post) {
+
+    const orderSectionEl = document.createElement("div");
+    orderSectionEl.classList.add("orderPosterPic");
+
+    orderSectionEl.innerHTML = `
+        <p> ${post.Title} </p>
+        <img src="${post.Poster !== "N/A" ? post.Poster : "placeholder.jpg"}" alt="${post.Title}"> 
+        `
+
+    document.getElementById("scrollIntoView").scrollIntoView({
+        behavior: "smooth",
+        block: "end"
+    });
+
+    orderSection.appendChild(orderSectionEl)
+};
