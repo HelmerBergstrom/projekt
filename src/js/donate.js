@@ -5,6 +5,7 @@ const apiKey = "cde6c1c5";
 const divEl = document.getElementById("orderPosters");
 const orderSection = document.getElementById("order-section");
 const orderForm = document.getElementById("order-form");
+const clickPoster = document.getElementById("clickPoster");
 
 window.addEventListener("DOMContentLoaded", () => {
     if(window.location.pathname.includes("/order.html")) {
@@ -46,11 +47,11 @@ function displayPosters(posters) {
         <p> 999kr/st </p>
         <br>
         `
-        
+
         posterEl.addEventListener("click", () => {
             displayOrderForm(post);
             orderForm.style.display = "block";
-            orderSection.style.display = "flex"
+            clickPoster.style.display = "none"
         });
     
         divEl.appendChild(posterEl)

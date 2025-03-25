@@ -199,13 +199,16 @@ header {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 50px;
-    display: none;
+    display: flex;
     flex-direction: column;
     
     h2 {
         color: rgb(233, 190, 0);
         margin-bottom: 30px;
     }
+}
+#clickPoster {
+    display: block;
 }
 
 #order-form {
@@ -237,10 +240,13 @@ header {
         font-size: 30px;
     }
 }
-.orderPosterPic {
-    width: 100%;
+.orderPosterPic img {
+    width: 250px;
 }
-
+.orderPosterPic p {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
 // Media för ljus/mörkt tema på använderens dator.
 
 @media (prefers-color-scheme: dark) {
