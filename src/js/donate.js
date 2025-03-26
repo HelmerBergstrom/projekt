@@ -143,10 +143,14 @@ function displayOrderForm(post) {
         <img src="${post.Poster !== "N/A" ? post.Poster : "placeholder.jpg"}" alt="${post.Title}"> 
         `
     // När funktionen körs ska användaren skrollas ned till ID "scrollIntoView".
+    // setTimeout för att invänta att beställningsformuläret laddas innan skrollandet.
+    // Sätter timeout till 500ms, alltså 0.5 sekunder.
+    setTimeout(() => {
     document.getElementById("scrollIntoView").scrollIntoView({
         behavior: "smooth",
         block: "end"
-    });
+    })
+    }, 500);
 
     // Skriver ut till sidan.
     orderSection.appendChild(orderSectionEl)
