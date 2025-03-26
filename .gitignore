@@ -4,9 +4,3 @@
 /.parcel-cache
 /dist
 /out
-/package-lock.json
-/package.json
-/.parcel-cache
-/dist
-/node_modules
-/out
