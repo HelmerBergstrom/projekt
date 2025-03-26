@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
  * 
  * @async
  * @function getData
- * @returns {Promise<void>} Uppdaterar endast DOM med film-posters.
+ * @returns {Promise<void>} Uppdaterar DOM med info om filmerna.
  * @throws {Error} Skriver ut felmeddelande om API musslyckas.
  */
 
