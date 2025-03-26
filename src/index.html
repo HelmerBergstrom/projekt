@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movie Tracker </title>
+    <link rel="stylesheet" href="./css/main.scss">
+    <script src="js/home.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/357e8aa026.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="pics/logo.svg" alt="logotyp"></a>
+
+        <nav>
+            <ul class="menu">
+                <li class="active-menu"><a href="#"><i class="fa-solid fa-house"></i> HEM </a></li>
+                <li><a href="movies.html"><i class="fa-solid fa-clapperboard"></i> FILMER & SERIER </a></li>
+                <li><a href="order.html"><i class="fa-solid fa-cart-shopping"></i> KÖP POSTERS </a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <a id="search-button-home1" href="movies.html"><i class="fa-solid fa-magnifying-glass"></i> SÖK FILM </a>
+        </div>
+
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <nav class="mobile-menu">
+            <ul>
+                <li class="active-menu"><a href="#"><i class="fa-solid fa-house"></i> HEM </a></li>
+                <li><a href="movies.html"><i class="fa-solid fa-clapperboard"></i> FILMER & SERIER </a></li>
+                <li><a href="order.html"><i class="fa-solid fa-cart-shopping"></i> KÖP POSTERS </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="theme">
+        <section id="home-page-section1">
+            <h1> MOVIE TRACKER </h1>
+                <p id="love-text"> För dig som älskar filmer och serier! </p>
+                    <p>
+                        <i class="fa-solid fa-film"></i>
+                    </p>
+            <div id="home-buy">
+                <h2> Köp posters för att stödja oss! </h2>
+                <br>
+                <p> Dessa posters har vi i lager </p>
+
+                <p id="arrowAni1"><i class="fa-solid fa-arrow-down"></i></p>
+                <p id="arrowAni2"><i class="fa-solid fa-arrow-down"></i></p>
+                <p id="arrowAni3"><i class="fa-solid fa-arrow-down"></i></p>
+                <p id="arrowAni4"><i class="fa-solid fa-arrow-down"></i></p>
+
+            </div>
+        </section>
+
+        <div id="home-page-posters">
+
+        </div>
+    </main>
+
+<script>
+    function toggleMenu() {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>

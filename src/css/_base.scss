@@ -1,0 +1,40 @@
+/* För saker som används på hela webbplatsen. T.ex. typsnitt. */
+$primary-font: Arial, Helvetica, sans-serif;
+$menu-font: Arial, Helvetica, sans-serif;
+
+main {
+    font-family: $primary-font;
+}
+h1 {
+    font-size: 40px;
+    color: white;
+}
+h2 {
+    font-size: 35px;
+    color: white;
+}
+h3 {
+    font-size: 30px;
+    color: white;
+}
+h4 {
+    color: white;
+}
+h5 {
+    color: white;
+}
+p {
+    font-size: 20px;
+    color: white;
+}
+.menu {
+    font-size: 32px;
+    font-family: $menu-font;
+    font-weight: bolder;
+}
+
+@media (max-width: 1500px) {
+    .menu {
+        font-size: 26px;
+    }
+}

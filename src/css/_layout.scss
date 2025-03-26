@@ -1,0 +1,372 @@
+$menu-background: rgb(233, 190, 0);
+$dark-mode-menu: darken($menu-background, 10%);
+$menu-text-color: white;
+
+$main-background: rgb(0, 0, 0);
+
+body {
+    background-color: $main-background;
+}
+header {
+    background-color: $menu-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.theme {
+    background-color: $main-background;
+}
+.logo {
+    padding: 10px;
+
+    img {
+        width: 170px;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+    }
+}
+
+// Meny för stora skärmar
+
+.menu {
+    display: flex;
+    justify-content: center;
+
+    ul {
+        align-items: center;
+    }   
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $menu-text-color;
+        margin-right: 100px;
+    }
+}
+.menu li:hover {
+    text-decoration: underline;
+}
+.active-menu {
+    text-decoration: underline;
+}
+
+// Meny för små skärmar
+
+.hamburger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    display: none;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    background: $menu-background;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+// Index-sidan
+
+#home-page-section1 {
+    text-align: center;
+    margin-top: 50px;
+    animation: posterAnimation 1s ease-out forwards;
+
+    h1 {
+        color: $menu-background;
+    }
+    p {
+        margin-top: 10px;
+        color: $menu-background;
+    }
+}
+#love-text {
+    margin-bottom: 50px;
+}
+.fa-film {
+    font-size: 100px;
+    margin-bottom: 50px;
+    animation: filmFont 1s forwards;
+}
+
+#home-buy h2 {
+    margin-top: 50px;
+}
+
+#arrowAni1 {
+    animation: arrow1 1.5s infinite;
+}
+#arrowAni2 {
+    animation: arrow2 1s infinite;
+}
+#arrowAni3 {
+    animation: arrow3 1s infinite;
+}
+#arrowAni4 {
+    animation: arrow4 1.5s infinite;
+}
+
+#home-page-posters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.posterPic {
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    padding: 50px;
+
+    img {
+        width: 250px;
+        border-radius: 10px;
+        animation: posterAnimation 3s ease-out forwards;
+        opacity: 0;
+    }
+}
+
+// Skapad i home.js
+
+#buyPoster {
+    color: black;
+    background-color: rgb(233, 190, 0);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+// Movies-sidan.
+
+#movie-page-info {
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
+}
+
+#moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#movieDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    h1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    img {
+        width: 250px;
+    }
+    p {
+        text-align: center;
+        width: 500px;
+    }
+}
+
+#director-info {
+    @extend #movieDetailsDiv ;
+
+    p {
+        margin-top: 10px;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+
+// Skapade i movies.js
+
+.movie {
+    width: 200px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        background-color: rgb(48, 48, 48);
+        padding: 5px;
+    }
+}
+
+#plotText {
+    margin-bottom: 20px;
+}
+
+#awardsText {
+    margin-top: 20px;
+}
+
+// Order-sidan
+
+#orderPosters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.order-poster-class {
+    @extend .movie ;
+    margin-top: 50px;
+    cursor: pointer;
+}
+#order-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    h2 {
+        color: rgb(233, 190, 0);
+        margin-bottom: 30px;
+    }
+}
+#clickPoster {
+    display: block;
+}
+
+#order-form {
+    display: none;
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    label {
+        color: rgb(233, 190, 0);
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    input {
+        margin-bottom: 15px;
+        height: 30px;
+        width: 200px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    select {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+.orderPosterPic img {
+    width: 250px;
+}
+.orderPosterPic p {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+// Media för ljus/mörkt tema på använderens dator.
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: $dark-mode-menu;
+    }
+    .menu a {
+        color: $main-background;
+    }
+    .mobile-menu {
+        background: $dark-mode-menu;
+    }
+}
+
+// Media för skärmbreddar under 1500px
+
+@media (max-width: 1500px) {
+    .logo img {
+        left: 0px;
+    }
+    .menu a {
+        margin-right: 50px;
+    }
+}
+
+// Media för skärmbreddar under 1100px
+
+@media (max-width: 1100px) {
+    .menu {
+        display: none;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
+    .hamburger-icon {
+        right: 50px;
+    }
+    .logo img {
+        width: 130px;
+        margin-top: 20px;
+    }
+    #movieDetailsDiv {
+        h1 {
+            width: 400px;
+        }
+        h2 {
+            width: 400px;
+        }
+        img {
+            width: 200px;
+        }
+        p {
+            width: 400px;
+        }
+    }
+    #orderForm select {
+        width: 130px;
+        height: 30px;
+        font-size: 18px;
+        transition: 1s ease;
+    }
+}

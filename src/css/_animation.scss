@@ -1,0 +1,100 @@
+
+@keyframes translateButton {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-640px) translateY(125px);
+    }
+    100% {
+        transform: translateX(-640px) translateY(125px);
+        opacity: 0;
+    }
+}
+
+@keyframes translateButtonResponsive {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateY(125px);
+    }
+    100% {
+        transform: translateY(125px);
+        opacity: 0;
+    }
+}
+
+@keyframes opacityButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes posterAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrow1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes arrow2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes arrow3 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes arrow4 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes filmFont {
+    0% {
+        transform: translateY(-100px);
+    }
+    25% {
+        transform: translateY(-55px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
