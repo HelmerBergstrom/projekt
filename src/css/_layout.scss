@@ -46,6 +46,12 @@ header {
         margin-right: 100px;
     }
 }
+.menu li:hover {
+    text-decoration: underline;
+}
+.active-menu {
+    text-decoration: underline;
+}
 
 // Meny för små skärmar
 
@@ -307,6 +313,8 @@ header {
     }
 }
 
+// Media för skärmbreddar under 1500px
+
 @media (max-width: 1500px) {
     .logo img {
         left: 0px;
@@ -316,11 +324,7 @@ header {
     }
 }
 
-
-
-
-
-
+// Media för skärmbreddar under 1100px
 
 @media (max-width: 1100px) {
     .menu {

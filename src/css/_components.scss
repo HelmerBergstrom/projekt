@@ -52,6 +52,11 @@ button {
     margin-top: 10px;
     font-weight: bold;
 }
+@media (max-width: 1850px) {
+    #search-button-home2 {
+        animation: translateButtonResponsive 3s forwards;
+    }
+}
 
 @media (max-width: 1500px) {
     #search-button-home1 {
@@ -72,5 +77,8 @@ button {
     }
     .fa-magnifying-glass {
         margin-right: 5px;
+    }
+    #search-button-home2 {
+        display: none;
     }
 }

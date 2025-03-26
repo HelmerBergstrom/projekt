@@ -12,6 +12,19 @@
     }
 }
 
+@keyframes translateButtonResponsive {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateY(125px);
+    }
+    100% {
+        transform: translateY(125px);
+        opacity: 0;
+    }
+}
+
 @keyframes opacityButton {
     0% {
         opacity: 0;
