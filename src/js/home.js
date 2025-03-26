@@ -55,6 +55,7 @@ async function getData() {
 
 /**
  * Visar posters på startsidan.
+ * Picture-tagg för att konvertera bilder till avif om möjligt. JPG som fallback.
  * 
  * @function displayHomePage
  * @param {Array} poster - array med "objects" från API:et

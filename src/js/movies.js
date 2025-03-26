@@ -93,6 +93,7 @@ async function searchMovies(title) {
 
 /**
  * Visar posters, titlar på filmer/serier och år då de släpptes.
+ * Picture-tagg för att konvertera bilder till avif om möjligt. JPG som fallback.
  * 
  * @function displayMovies
  * @param {Array} movies - array med filmer/serier från tidigare funktion.
@@ -172,6 +173,7 @@ async function getMovieDetails(imdbID) {
 
 /**
  * Visar detaljer för filmen/serien. Skriver ut med innerHTML.
+ * Picture-tagg för att konvertera bilder till avif om möjligt. JPG som fallback.
  * 
  * @function displayMovieDetails
  * @param {Array} movie - array med detaljer.

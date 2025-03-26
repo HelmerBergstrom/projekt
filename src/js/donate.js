@@ -69,6 +69,7 @@ async function getData () {
 
 /**
  * Visar posters för Star Wars-filmer.
+ * Picture-tagg för att konvertera bilder till avif om möjligt. JPG som fallback.
  * 
  * @function displayPosters
  * @param {Array} posters - array med "objects" med detaljer om filmerna.
@@ -143,7 +144,10 @@ function displayOrderForm(post) {
     // Skriver ut posterns titel och bild.
     orderSectionEl.innerHTML = `
         <p> ${post.Title} </p>
-        <img src="${post.Poster !== "N/A" ? post.Poster : "placeholder.jpg"}" alt="${post.Title}"> 
+        <picture>
+            <source srcset="${post.Poster.replace('.jpg', '.avif')}" type="image/avif">
+            <img src="${post.Poster !== "N/A" ? post.Poster : "placeholder.jpg"}" alt="${post.Title}"> 
+        </picture>
         `
     // När funktionen körs ska användaren skrollas ned till ID "scrollIntoView".
     // setTimeout för att invänta att beställningsformuläret laddas innan skrollandet.
