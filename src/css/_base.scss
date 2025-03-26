@@ -32,3 +32,9 @@ p {
     font-family: $menu-font;
     font-weight: bolder;
 }
+
+@media (max-width: 1500px) {
+    .menu {
+        font-size: 26px;
+    }
+}

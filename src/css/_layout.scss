@@ -9,15 +9,30 @@ body {
 }
 header {
     background-color: $menu-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.theme {
+    background-color: $main-background;
+}
+.logo {
+    padding: 10px;
+
+    img {
+        width: 170px;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+    }
 }
 
+// Meny för stora skärmar
 
 .menu {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 65px;
-    left: 30%;
 
     ul {
         align-items: center;
@@ -32,10 +47,41 @@ header {
     }
 }
 
-.theme {
-    background-color: $main-background;
-}
+// Meny för små skärmar
 
+.hamburger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    display: none;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    background: $menu-background;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
 
 // Index-sidan
 
@@ -255,5 +301,35 @@ header {
     }
     .menu a {
         color: $main-background;
+    }
+    .mobile-menu {
+        background: $dark-mode-menu;
+    }
+}
+
+@media (max-width: 1500px) {
+    .logo img {
+        left: 0px;
+    }
+    .menu a {
+        margin-right: 50px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+    .menu {
+        display: none;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: flex;
     }
 }

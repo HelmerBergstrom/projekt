@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html" id="logo"><img src="pics/logo.svg" alt="logotyp" width="150" style="margin-left: 150px;"></a>
+        <a href="index.html" class="logo"><img src="pics/logo.svg" alt="logotyp"></a>
 
         <nav>
             <ul class="menu">
@@ -23,6 +23,18 @@
         <div>
             <a id="search-button-home1" href="movies.html"><i class="fa-solid fa-magnifying-glass"></i> SÖK FILM </a>
         </div>
+
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> HEM </a></li>
+                <li><a href="movies.html"><i class="fa-solid fa-clapperboard"></i> FILMER & SERIER </a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> KÖP POSTERS </a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="theme">
@@ -68,6 +80,12 @@
 
         <span id="scrollIntoView"></span>
     </main>
+
+<script>
+    function toggleMenu() {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>
