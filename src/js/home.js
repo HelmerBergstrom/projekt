@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Promise<void> Returnerar en Promise som inte returnerar något (uppdaterar bara DOM)
+
 /**
  * Hämtar Star Wars data som ska visas på startsidan.
  * 
