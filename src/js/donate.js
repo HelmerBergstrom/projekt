@@ -95,9 +95,12 @@ function displayPosters(posters) {
 
         // Skriver ut bilder med innerHTML.
         posterEl.innerHTML = `
-        <img src="${picture}" alt="${post.Title}">
-        <br>
-        <br>
+        <picture>
+            <source srcset="${picture.replace('.jpg', '.avif')}" type="image/avif">
+            <img src="${picture}" alt="${post.Title}">
+        </picture>
+    <br>
+    <br>
         <p> 999kr/st </p>
         <br>
         `

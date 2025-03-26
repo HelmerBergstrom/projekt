@@ -81,11 +81,15 @@ function displayHomePage(poster) {
         // Skriver ut bild samt 999kr i pris för varje poster. Även länk till order.html-sidan på varje bild.
         posterElement.innerHTML = `
         <a href="order.html">
-        <img src="${posterPicture}" alt="${post.Title}"></a>
-        <br>
-        <br>
-        <br>
-        <br>
+            <picture>
+                <source srcset="${posterPicture.replace('.jpg', '.avif')}" type="image/avif">
+                <img src="${posterPicture}" alt="${post.Title}">
+            </picture>
+        </a>
+    <br>
+    <br>
+    <br>
+    <br>
         <p> 999kr/st </p>
         `
 

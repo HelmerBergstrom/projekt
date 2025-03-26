@@ -114,8 +114,10 @@ function displayMovies(movies) {
 
         // Skriver ut för visning på sidan.
         movieElement.innerHTML = `
-            <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" 
-            alt="${movie.Title}">
+        <picture>
+            <source srcset="${movie.Poster.replace('.jpg', '.avif')}" type="image/avif">
+            <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}">
+        </picture>
             <h3>${movie.Title}</h3>
             <p>${movie.Year}</p>
         `;
@@ -178,7 +180,11 @@ function displayMovieDetails(movie) {
     movieDetails.innerHTML = `
         <h1>${movie.Title}</h1>
         <p>BETYG FRÅN IMDB: ${movie.imdbRating}</p>
-        <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}">
+
+        <picture>
+            <source srcset="${movie.Poster.replace('.jpg', '.avif')}" type="image/avif">
+            <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}">
+        </picture>
         <p><strong>LÄNGD:</strong> ${movie.Runtime}</p>
         <p><strong>GENRE:</strong> ${movie.Genre}</p>
         <p><strong>REGISSÖR:</strong> ${movie.Director}</p>
