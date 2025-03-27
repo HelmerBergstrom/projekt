@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function getData() {
     /** @const {string} posterUrl1 - URL för att hämta Star Wars-filmer. */
-    const posterUrl1 = `http://www.omdbapi.com/?s=Star_Wars&apikey=${apiKey}`;
+    const posterUrl1 = `https://www.omdbapi.com/?s=Star_Wars&apikey=${apiKey}`;
 
     try {
         const response = await fetch(posterUrl1)

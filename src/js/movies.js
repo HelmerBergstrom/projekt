@@ -74,7 +74,7 @@ searchInput.addEventListener("keypress", (event) => {
  */
 async function searchMovies(title) {
     /** @const {string} url - URL för att hämta data, där "title" är användarens sökning. */
-    const url = `http://www.omdbapi.com/?s=${title}&apikey=${apiKey}`;
+    const url = `https://www.omdbapi.com/?s=${title}&apikey=${apiKey}`;
     
     try {
         const response = await fetch(url);
@@ -149,7 +149,7 @@ function displayMovies(movies) {
 async function getMovieDetails(imdbID) {
 
     /** @const {string} url2 - URL för att hämta detaljer med imdbID:t för filmen/serien. */
-    const url2 = `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`;
+    const url2 = `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`;
 
     try {
         const response = await fetch(url2);

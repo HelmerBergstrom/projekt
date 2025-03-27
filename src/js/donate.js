@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
  */
 async function getData () {
     /** @const {string} url - URL för att hämta STar Wars-data.  */
-    const url = `http://www.omdbapi.com/?s=Star_Wars&apikey=${apiKey}`
+    const url = `https://www.omdbapi.com/?s=Star_Wars&apikey=${apiKey}`
 
     try {
         const response = await fetch(url);
