@@ -36,7 +36,7 @@ const clickPoster = document.getElementById("clickPoster");
  * @event window#DOMContentLoaded
  */
 window.addEventListener("DOMContentLoaded", () => {
-    if(window.location.pathname.includes("/order.html")) {
+    if (window.location.pathname.endsWith("order") || window.location.pathname.endsWith("order.html")) {
         getData();
     }
 });
